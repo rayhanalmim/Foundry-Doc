@@ -152,3 +152,20 @@ foundryup
 foundryup-zksync
 ```
 
+local rpc : - zkSync Node (L2):
+  - Chain ID: 260
+  - RPC URL: http://127.0.0.1:8011
+  - Rich accounts: https://docs.zksync.io/build/test-and-debug/in-memory-node#pre-configured-rich-wallets
+
+### create config
+```
+npx zksync-cli dev config
+```
+
+  ### deploy the contract on the docker using zsync
+
+
+  ```
+  forge create src/SimpleStorage.sol:SimpleStorage --rpc-url http://127.0.0.1:8011 --private-key 0x3d3cbc973389cb26f657
+686445bcc75662b415b656078503592ac8c1abb8810e --legacy --zksync
+  ```
